@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mStringValue = Integer.parseInt(stringEditText.getText().toString());
-                ;
                 str_store_fn(mStringValue);
             }
         });
@@ -32,15 +31,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void str_store_fn(Integer m_enteredStr) {
         if (m_enteredStr != null) {
-            Stack<Integer> stack_store = new Stack<Integer>();
+            Stack<Integer> stack_store = new Stack<>();
             stack_store.push(m_enteredStr);
-            System.out.println("Stack val: " + stack_store);
             Dup_chk(stack_store);
         }
     }
 
     private static Stack<Integer> Dup_chk(Stack<Integer> stack_store) {
-        Stack<Integer> dup_val_return = new Stack<Integer>();
+        Stack<Integer> dup_val_return = new Stack<>();
 
         int head = stack_store.peek();
 
